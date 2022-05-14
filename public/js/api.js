@@ -20,7 +20,7 @@ massage1.textContent = 'Enter Location...'
         const location = search.value
         console.log(location)
     
-        fetch('http://localhost:3000/weather?search='+ location).then((data)=>{
+        fetch('/weather?search='+ location).then((data)=>{
         data.json().then((result)=>{
             console.log(result.Forecast)
             massage1.textContent = 'Cloudcover : ' +result.Forecast.cloudcover

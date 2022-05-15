@@ -7,7 +7,7 @@ const hbs = require('hbs')
 const W_search = require('./utils/app-mymethod')
 app = express()
 
-const port = process.env.PORT 
+const port = process.env.PORT || 8080
 
 //defining paths for express config
 const publicDir = path.join(__dirname, "../public")

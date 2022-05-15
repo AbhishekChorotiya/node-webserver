@@ -7,7 +7,6 @@ const hbs = require('hbs')
 const W_search = require('./utils/app-mymethod')
 app = express()
 
-const port = process.env.PORT || 3000
 
 //defining paths for express config
 const publicDir = path.join(__dirname, "../public")
@@ -98,6 +97,6 @@ if(!req.query.search){
 
 
 
- app.listen(port,()=>{
+ app.listen(process.env.PORT || 5000,()=>{
      console.log('Server is up on port ' + port)
  })
